@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question</h1>
+    <script>
+function calculateTax(income) {
+    return function() {
+        let taxRate;
+        if (income <= 30000) {
+            taxRate = 0.1;  
+        } else if (income <= 70000) {
+            taxRate = 0.2;  
+        } else {
+            taxRate = 0.3; 
+        }
+        let taxAmount = income * taxRate;
+        return taxAmount;
+    };
+}
+let tax1 = calculateTax(25000); // Low income
+console.log("Tax for income 25,000: $" + tax1());  // 10% tax
+let tax2 = calculateTax(50000); // Medium income
+console.log("Tax for income 50,000: $" + tax2());  // 20% tax
+let tax3 = calculateTax(90000); // High income
+console.log("Tax for income 90,000: $" + tax3());  // 30% tax
+    </script>
+</body>
+</html>

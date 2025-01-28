@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>question</h1>
+    <script>
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.displayInfo = function() {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+};
+const person1 = new Person('Jay', 25);
+const person2 = new Person('Kishan', 30);
+person1.displayInfo(); 
+person2.displayInfo(); 
+    </script>
+</body>
+</html>

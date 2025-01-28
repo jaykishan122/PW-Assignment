@@ -1,0 +1,14 @@
+
+
+HTML entities are special characters or reserved symbols in HTML that are represented by a specific code to avoid conflicts in rendering. 
+These entities begin with an ampersand (&) and end with a semicolon (;). 
+They are commonly used to display characters that have special meaning in HTML or are not easily typed on a keyboard.
+
+
+
+ five commonly used HTML entities: 
+1.&amp; Ampersand
+2.&quot; Double quotation mark
+3.&cent; Cent
+4.&gt; Greater than
+5.&apos; Single quotation mark

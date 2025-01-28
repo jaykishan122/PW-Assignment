@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Auto Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      
+      h3 {
+        margin-bottom: 10px;
+      }
+      
+      /* Grid container with grid-auto-rows */
+      .grid-container-rows {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+        grid-template-rows: 100px; /* 1 row initially */
+        grid-auto-rows: 150px; /* Extra rows will have 150px height */
+        gap: 10px;
+        width: 300px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        margin-bottom: 30px;
+      }
+      
+      .grid-container-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+        grid-template-rows: 100px; /* 1 row initially */
+        grid-auto-columns: 150px; /* Extra columns will have 150px width */
+        gap: 10px;
+        width: 300px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+      }
+      
+      .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3498db;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      </style>
+  <div class="grid-container-rows">
+    <h3>Grid with grid-auto-rows</h3>
+    <div class="grid-item">A</div>
+    <div class="grid-item">B</div>
+    <div class="grid-item">C</div> <!-- Automatically placed in the next row -->
+  </div>
+
+  <div class="grid-container-columns">
+    <h3>Grid with grid-auto-columns</h3>
+    <div class="grid-item">A</div>
+    <div class="grid-item">B</div>
+    <div class="grid-item">C</div> <!-- Automatically placed in the next column -->
+  </div>
+</body>
+</html>

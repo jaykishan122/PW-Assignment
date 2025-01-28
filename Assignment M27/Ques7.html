@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dropdown Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav > ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown ul {
+            display: none;
+            position: absolute;
+            margin: 0;
+            padding-left: 20px;
+            background-color: #f4f4f4;
+            list-style: circle;
+        }
+
+        .dropdown ul li {
+            margin: 5px 0;
+        }
+
+        .dropdown:hover ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Submenu 4</a></li>
+                    <li><a href="#">Submenu 5</a></li>
+                    <li><a href="#">Submenu 6</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Add event listeners for better control using JavaScript
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', () => {
+                const submenu = dropdown.querySelector('ul');
+                submenu.style.display = 'block';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                const submenu = dropdown.querySelector('ul');
+                submenu.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>

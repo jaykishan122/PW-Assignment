@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justify Items vs Justify Self</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>/* Basic reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f4f4f4;
+        }
+        
+        /* Grid Container */
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(4, 100px); /* 4 equal columns */
+          grid-template-rows: 100px; /* 1 row */
+          gap: 10px;
+          width: 500px;
+          height: 100px;
+          background-color: #ddd;
+          padding: 10px;
+          justify-items: center; /* Align all items horizontally in the center */
+        }
+        
+        /* Grid Items */
+        .grid-item {
+          background-color: #3498db;
+          color: white;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          height: 100%;
+        }
+        
+        /* Individual Item Adjustments */
+        .item1 {
+          justify-self: start; /* Align Item 1 to the left */
+        }
+        
+        .item2 {
+          justify-self: end; /* Align Item 2 to the right */
+        }
+        
+        .item3 {
+          justify-self: center; /* Align Item 3 to the center */
+        }
+        
+        .item4 {
+          justify-self: stretch; /* Stretch Item 4 to fill the entire cell horizontally */
+        }
+        </style>
+  <div class="grid-container">
+    <div class="grid-item item1">Item 1</div>
+    <div class="grid-item item2">Item 2</div>
+    <div class="grid-item item3">Item 3</div>
+    <div class="grid-item item4">Item 4</div>
+  </div>
+</body>
+</html>

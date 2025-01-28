@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features of HTML5</title>
+    <!-- <style> -->
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+        }
+        article {
+            margin-bottom: 2em;
+            padding: 1em;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+    <!-- </style> -->
+</head>
+<body>
+    <header>
+        <h1>Discover HTML5 Features</h1>
+    </header>
+
+    <nav>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#graphics">Graphics</a>
+        <a href="#forms">Enhanced Forms</a>
+    </nav>
+
+    <main>
+        <section>
+            <article id="multimedia">
+                <h2>1. Multimedia Support</h2>
+                <p>HTML5 introduced native support for audio and video elements, eliminating the need for external plugins like Flash. Here's an example of embedding a video:</p>
+                <video controls width="400">
+                    <source src="example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+
+            <article id="graphics">
+                <h2>2. Graphics with Canvas</h2>
+                <p>The <code>&lt;canvas&gt;</code> element in HTML5 allows dynamic, scriptable rendering of 2D graphics directly in the browser. Here's an example:</p>
+                <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+                <script>
+                    const canvas = document.getElementById('myCanvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = 'blue';
+                    ctx.fillRect(50, 50, 200, 100);
+                </script>
+            </article>
+
+            <article id="forms">
+                <h2>3. Enhanced Forms</h2>
+                <p>HTML5 introduced new input types and attributes to improve user experience. For example:</p>
+                <form>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <br><br>
+                    <label for="dob">Date of Birth: </label>
+                    <input type="date" id="dob" name="dob">
+                    <br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn HTML5. All rights reserved.</p>
+    </footer>
+</body>
+</html>

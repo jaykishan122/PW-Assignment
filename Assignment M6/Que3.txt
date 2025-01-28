@@ -1,0 +1,19 @@
+Web browser Developer Tools
+
+1.HTML/CSS Inspection & Editing: Inspect and modify HTML elements and CSS styles in real time to fix layout and design issues.
+
+2.JavaScript Debugging: Identify and fix JavaScript errors, set breakpoints, and step through code execution.
+
+3.Network Monitoring: Monitor HTTP requests, responses, load times, and API calls to diagnose slow or failed resources.
+
+4.Performance Analysis: Measure page load times, optimize rendering, track memory usage, and identify performance bottlenecks.
+
+5.Responsive Design Testing: Simulate different screen sizes and devices to ensure your website is responsive.
+
+6.Storage & Cookies Management: Inspect and modify cookies, localStorage, sessionStorage, and databases to manage client-side data.
+
+7.Security & HTTPS Debugging: Check SSL/TLS certificates, security headers, and HTTPS status for secure connections.
+
+8.Mobile Device Emulation: Test mobile-specific features like touch gestures and layouts on simulated devices.
+
+9.Audit & Accessibility: Run audits (e.g., Lighthouse) to check for performance, accessibility, SEO, and best practices.

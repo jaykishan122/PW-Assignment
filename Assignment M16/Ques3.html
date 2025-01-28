@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Spinner</title>
+    <style>
+        /* Center the loader on the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Styling for the loader */
+        .loader {
+            border: 8px solid #f3f3f3; /* Light grey background for the circle */
+            border-top: 8px solid #3498db; /* Blue color for the top part */
+            border-radius: 50%; /* Make it a circle */
+            width: 80px; /* Size of the loader */
+            height: 80px; /* Size of the loader */
+            animation: spin 2s linear infinite; /* Apply the spinning animation */
+        }
+
+        /* Keyframes for rotation animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg); /* Start from 0 degrees */
+            }
+            100% {
+                transform: rotate(360deg); /* Rotate to 360 degrees */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Circular loader element -->
+    <div class="loader"></div>
+</body>
+</html>

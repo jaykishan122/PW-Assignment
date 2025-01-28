@@ -1,0 +1,35 @@
+nav a {
+    color: red;
+}
+header > nav > h2 {
+    color: white;
+    background-color: blue;
+}
+header > nav > p:first-of-type {
+    color: red;
+}
+a[href] {
+    color: red;
+    text-decoration: none;
+}
+a[class="active"] {
+    color: green;
+    text-decoration: underline;
+    font-style: italic;
+}
+a[target="_self"] {
+    background-color: yellow;
+}
+header > nav > p:last-of-type::after {
+    content: "...";
+}
+ul {
+    list-style-type: none;
+}
+ul li::marker {
+    color: blue;
+}
+header > nav > p:nth-of-type(2)::first-letter {
+    color: red;
+    font-size: 30px;
+}

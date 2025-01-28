@@ -1,0 +1,48 @@
+/* Styling for the button container to align buttons inline */
+.button-container {
+    display: flex;
+    justify-content: center;  /* Center all elements in the container */
+    align-items: center;  /* Align elements vertically in the center */
+    gap: 20px;  /* Space between the buttons and the center text */
+    margin-top: 50px;
+  }
+  
+  /* Basic button styling */
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #0891ec;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 20px;
+    margin-inline: 30px;
+    border-radius: 10px;
+  }
+  /* Styling for the text between buttons */
+  .center-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Hover effects */
+  .btn:hover {
+    background-color: #2980b9; /* Change color */
+    box-shadow: 0px 4px 10px rgba(4, 124, 237, 0.2); /* Add shadow */
+    cursor: pointer; /* Change cursor */
+  }
+  
+  /* Hovering over the buttons with smooth transition */
+  .btn:hover::before {
+    color: #ecf0f1; /* Change color of 'before' text on hover */
+  }
+  
+  .btn:hover::after {
+    color: #ecf0f1; /* Change color of 'after' text on hover */
+  }
+  

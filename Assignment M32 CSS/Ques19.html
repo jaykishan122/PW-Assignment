@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Logo</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#heading1">Heading 1</a>
+        <a href="#heading2">Heading 2</a>
+        <a href="#heading3">Heading 3</a>
+        <a href="#heading4">Heading 4</a>
+        <a href="#heading5">Heading 5</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Welcome to the Home Section</h1>
+    <p>Scroll down to see the sticky header in action.</p>
+</section>
+
+<section id="heading1">
+    <h1>Heading 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolor minus omnis expedita ratione temporibus, velit, nemo nostrum nisi facilis molestias dicta nobis praesentium fugit modi voluptate, vitae sit mollitia!.</p>
+</section>
+
+<section id="heading2">
+    <h1>Heading 2</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quidem incidunt unde blanditiis praesentium beatae quisquam soluta modi tempore voluptatum. Autem illum aliquam eum sint eius laudantium illo eaque impedit.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quisquam voluptas numquam explicabo debitis deserunt quidem, at fugit, corrupti aperiam eius accusamus, reprehenderit asperiores cupiditate! Debitis temporibus quia quos deserunt?.</p>
+</section>
+
+<section id="heading3">
+    <h1>Heading 3</h1>
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, odit ea tenetur modi impedit eveniet laudantium quisquam aliquid, reprehenderit hic amet quam molestias similique eligendi. Accusantium praesentium consectetur eaque cum!
+    </p>
+</section>
+
+<section id="heading4">
+    <h1>Heading 4</h1>
+    <p>This is the content for Heading 4.</p>
+</section>
+
+<section id="heading5">
+    <h1>Heading 5</h1>
+    <p>This is the content for Heading 5.</p>
+</section>
+
+</body>
+</html>

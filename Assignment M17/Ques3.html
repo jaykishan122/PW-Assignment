@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques3</title>
+
+
+
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 100px;
+            height: 35px;
+            background-color: black;
+            color: white;
+            list-style: none;
+
+        }
+
+
+
+        @media only screen and (max-width: 600px) {
+            .home {
+                height: 250px;
+                width: 100%;
+                background-color: gray;
+            }
+
+            .navbar {
+                display: flex;
+                background-color: gray;
+                flex-direction: column;
+                color: white;
+                gap: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <ul class="navbar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</body>
+
+</html>

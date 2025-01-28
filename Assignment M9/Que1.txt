@@ -1,0 +1,11 @@
+Key Features of HTML5 
+
+1.Multimedia Support: Native <audio> and <video> tags for embedding media.
+
+2.Semantic Elements: New tags like <header>, <footer>, <article>, and <section> for better structure.
+
+3.Enhanced Forms: New input types (email, date, number) and attributes (placeholder, required).
+
+4.Graphics and APIs: <canvas> for 2D graphics, Web Storage, Geolocation, and WebSockets.
+
+5.Mobile-Friendly: Responsive design with the viewport meta tag and offline support via Service Workers.

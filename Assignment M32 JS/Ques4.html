@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+</head>
+<body>
+    <h1>Question</h1>
+    <script>
+        function gradeStudent(marks) {
+    let grade;
+
+    if (marks > 90) {
+        grade = 'A';
+    } else if (marks > 70 && marks <= 90) {
+        grade = 'B';
+    } else if (marks > 50 && marks <= 70) {
+        grade = 'C';
+    } else {
+        grade = 'F';
+    }
+    console.log(`Marks: ${marks}, Grade: ${grade}`);
+}
+gradeStudent(95); 
+gradeStudent(85); 
+gradeStudent(65); 
+gradeStudent(45); 
+    </script>
+</body>
+</html>

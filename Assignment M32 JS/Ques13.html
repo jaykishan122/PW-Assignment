@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>localStorage and sessionStorage Example</title>
+</head>
+<body>
+    <h1>localStorage and sessionStorage Example</h1>
+
+    <div>
+        <h3>localStorage Example:</h3>
+        <button id="setLocal">Set Local Data</button>
+        <button id="getLocal">Get Local Data</button>
+    </div>
+
+    <div>
+        <h3>sessionStorage Example:</h3>
+        <button id="setSession">Set Session Data</button>
+        <button id="getSession">Get Session Data</button>
+    </div>
+
+    <script>
+        // localStorage: Set and Get Data
+        document.getElementById("setLocal").addEventListener("click", function () {
+            localStorage.setItem("localData", "This is localStorage data.");
+            alert("Data saved in localStorage!");
+        });
+
+        document.getElementById("getLocal").addEventListener("click", function () {
+            const localData = localStorage.getItem("localData");
+            alert(localData ? `localStorage Data: ${localData}` : "No data found in localStorage.");
+        });
+
+        // sessionStorage: Set and Get Data
+        document.getElementById("setSession").addEventListener("click", function () {
+            sessionStorage.setItem("sessionData", "This is sessionStorage data.");
+            alert("Data saved in sessionStorage!");
+        });
+
+        document.getElementById("getSession").addEventListener("click", function () {
+            const sessionData = sessionStorage.getItem("sessionData");
+            alert(sessionData ? `sessionStorage Data: ${sessionData}` : "No data found in sessionStorage.");
+        });
+    </script>
+</body>
+</html>

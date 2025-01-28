@@ -1,0 +1,11 @@
+
+
+In WD,accessibility refers to designing and developing websites, tools, and applications in a way that 
+ensures they can be used by people with a wide range of abilities and disabilities. 
+This includes considerations for users with visual, auditory, motor, cognitive, or neurological impairments.
+ Accessibility aims to remove barriers and provide an inclusive user experience for all.
+
+ WHY ??
+ Creating accessible websites promotes inclusivity, complies with legal requirements, improves usability for all users, 
+ expands audience reach, and enhances SEO and performance. 
+ It benefits people with disabilities, aging populations, users with temporary impairments, and even those in challenging environments.

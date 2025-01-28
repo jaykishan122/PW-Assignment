@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Gallery Container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three images per row */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+}
+
+/* Images */
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Media Query for screens smaller than 800px */
+@media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    }
+}
+
+/* Media Query for screens smaller than 500px */
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* One image per row */
+    }
+}
+
+    </style>
+    <div class="gallery">
+        <img src="1.png" alt="Image 1">
+        <img src="1.png" alt="Image 2">
+        <img src="1.png" alt="Image 3">
+    </div>
+</body>
+</html>

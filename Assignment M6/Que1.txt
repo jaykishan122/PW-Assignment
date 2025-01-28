@@ -1,0 +1,4 @@
+The 3 Components in client-server architecture.
+1. Workstations : Focused on individual tasks rather than handling requests from multiple computers or storing large amounts of data.
+2. Server:  To manage and respond to multiple client requests, provide centralized resources (files, databases, etc.), and perform specific roles such as domain control, file serving, mail management, and database hosting, ensuring efficient network performance and simplified maintenance.
+3. Networking Device: The  client-server architecture, such as hubs (connect workstations to a server), repeaters (extend signal range between devices), and bridges (segment isolated networks), facilitate communication and data flow across the network.

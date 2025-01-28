@@ -1,0 +1,34 @@
+
+Features          Text Editor                IDE
+
+1.Complexity        Simple,lightweight         all in one environment.
+                  minimal features 
+
+2.Debugging        No build in debugger         build in debugging with step
+                   external tools need            breakpoints.
+
+3.Code             Basic auto Completion         Advanced,context aware code combination.
+  Completion 
+
+4.Key Tools        Syntax highlighting, 
+                   basic editing                 Code completion, debugging, testing, compiling.
+
+
+
+Use Cases:
+
+Text Editor
+
+1.Quick Edits: Ideal for quickly editing files or writing scripts without the overhead of an entire IDE.
+2.Lightweight Development: Developers who prefer lightweight tools, or those working in languages that don’t require extensive tooling, often use text editors.
+3.Web Development: Many web developers use text editors with extensions to work on HTML, CSS, JavaScript, etc., as they don’t necessarily require a full-fledged IDE.
+4.Cross-Platform Work: Text editors can be used on almost any platform and with virtually any programming language, provided the necessary extensions are installed.
+5.Non-Programmers: Great for non-programming tasks like writing Markdown files or configuration files.
+
+IDE
+
+1.Large-Scale Projects: IDEs are ideal for complex, large-scale projects, particularly those involving multiple files, libraries, and frameworks.
+2.Enterprise Development: Common in enterprise environments, where developers work on projects requiring heavy debugging, testing, and collaboration.
+3.Languages with Complex Tooling: For languages like Java, C++, or .NET that often require compilation and complex debugging, an IDE provides built-in tools to handle these needs seamlessly.
+4.Team Collaboration: IDEs typically offer better support for team collaboration, with features like version control, code reviews, and integration with project management tools.
+5.Integrated Testing: IDEs often support automated testing and integrate well with testing frameworks, which is crucial for developers working with TDD (Test-Driven Development) or CI/CD workflows.

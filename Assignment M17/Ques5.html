@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    border: 5px solid rebeccapurple;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+  }
+  .box1, .box4 {
+    background-color: black;
+    flex: 1;
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+  
+  .box2 {
+    background-color: #66cdaa;
+    flex: 1;
+  }
+  
+  .box3 {
+    background-color: #f5a742;
+    flex: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    
+    .container {
+      flex-direction: column; 
+      width: 100%;
+      height: auto;
+    }
+  
+    .box, .center {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+    .center {
+      order: 1; 
+    }
+  
+    .box1 {
+      order: 0; 
+      height: 90px;
+    }
+
+    .box2,.box3{
+        height: 90px;
+    }
+  
+    .box4 {
+      order: 2; 
+      height: 50px; 
+      position:absolute;
+      bottom: 0;
+      height: 90px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">Box1</div>
+    <div class="center">
+      <div class="box box2">Box2</div>
+      <div class="box box3">Box3</div>
+    </div>
+    <div class="box box4">Box4</div>
+  </div>
+</body>
+</html>

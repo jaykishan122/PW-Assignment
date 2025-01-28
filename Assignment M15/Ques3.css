@@ -1,0 +1,21 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Add random words before and after the <h1> tag */
+h1::before {
+    content: "Hello!"; /* Random word before the element */
+    color: blue;
+    font-size: 24px;
+    margin-right: 10px; /* Space between the word and the <h1> text */
+}
+
+h1::after {
+    content: "World!"; /* Random word after the element */
+    color: green;
+    font-size: 24px;
+    margin-left: 10px; /* Space between the <h1> text and the word */
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid 3x2 Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>/* Basic reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f4f4f4;
+         
+        }
+        
+        /* Grid container */
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+          grid-template-rows: repeat(2, 1fr); /* Create 2 equal rows */
+          gap: 5px; /* Space between grid items */
+          width: 600px;
+          height: 400px;
+          background-color: #f2eaea;
+          border: 4px solid #242121;
+          
+        }
+        
+        /* Grid items */
+        .grid-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #5de911;
+          color:solid black;
+          font-size: 48px;
+          font-weight: bold;
+          border-radius: 5px;
+          margin-block: 5px;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        
+        Ensure B takes the third column in both rows
+        .grid-item:nth-child(1) {
+          grid-column: 1; /* B in the first row, third column */
+        }
+        
+        .grid-container >.grid-item:nth-child(1) {
+        grid-column:span 2;
+        }
+        .grid-container >.grid-item:nth-child(2) {
+        grid-row:span 3;
+        }
+        </style>
+  <div class="grid-container">
+    <div class="grid-item">A</div>
+    <div class="grid-item">B</div>
+    <div class="grid-item">C</div>
+    <div class="grid-item">D</div>
+  </div>
+</body>
+</html>

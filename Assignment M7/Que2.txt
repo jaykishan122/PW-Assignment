@@ -1,0 +1,15 @@
+ HTML comments are used to clarify the code .
+  Add Explanatory notes.
+
+Here 2 types of comments.
+
+1.	Single-line Comments
+
+2.	Multi-line Comments
+Example :
+
+<!-- this is the comments example -->
+<!-- this is the comments example -->
+<!-- this is the comments example -->
+ 
+Sortcut Key :- Ctrl+/

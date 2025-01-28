@@ -1,0 +1,20 @@
+After completing a web development course, there are various career paths you can pursue.
+
+1.Front end Developer
+  Role: Focuses on building the user interface (UI) and user experience (UX) of websites and web applications.
+
+2.Back end Developer
+  Role:Works on the server-side of web development, dealing with databases, server logic, and API development.
+
+3.Full Stack Developer
+  Role: A combination of both front-end and back-end development, a full-stack developer handles all aspects of web development.
+
+4. Web Designer(UI/UX)
+ Role: Focuses on the aesthetic and functional aspects of a website. They are responsible for designing the user interface and ensuring a great user experience.
+
+5.WordPress Developer
+  Role:Specializes in using WordPress, the most popular content management system (CMS), to build and manage websites.
+  Building custom themes and plugins for WordPress. Setting up and managing WordPress-based websites.Troubleshooting and optimizing existing WordPress websites
+
+6.Web Security Specialist
+  Role:Main Focus on  securing web applications, protecting them from cyberattacks, and ensuring data privacy. 

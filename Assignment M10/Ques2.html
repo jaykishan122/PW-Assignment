@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Styling with BEM</title>
+    <style>
+        /* CSS Following BEM Naming Convention */
+
+        /* Block: content-section */
+        .content-section__paragraph--intro {
+            font-size: 18px;
+            color: darkblue;
+            margin-bottom: 10px;
+        }
+
+        .content-section__paragraph--info {
+            font-size: 16px;
+            color: darkgreen;
+            line-height: 1.5;
+        }
+
+        .content-section__paragraph--warning {
+            font-size: 16px;
+            color: red;
+            background-color: lightyellow;
+            padding: 10px;
+            border: 1px solid darkred;
+        }
+
+        .content-section__paragraph--note {
+            font-size: 14px;
+            font-style: italic;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Paragraph Styling with BEM</h1>
+
+    <div class="content-section">
+        <p class="content-section__paragraph--intro">This is an introduction paragraph with a larger font and dark blue color.</p>
+        <p class="content-section__paragraph--info">This paragraph provides informational content with dark green text and proper line spacing.</p>
+        <p class="content-section__paragraph--warning">This is a warning paragraph with red text and a highlighted background.</p>
+        <p class="content-section__paragraph--note">This is a note paragraph with italicized gray text for additional remarks.</p>
+    </div>
+
+    <p>
+        <strong>Explanation of BEM Naming:</strong>
+        <ul>
+            <li><strong>Block:</strong> "content-section" groups related paragraphs as a cohesive unit.</li>
+            <li><strong>Element:</strong> "__paragraph" identifies the paragraphs as elements of the block.</li>
+            <li><strong>Modifier:</strong> "--intro", "--info", "--warning", and "--note" denote specific styles or purposes for the paragraphs.</li>
+        </ul>
+    </p>
+</body>
+</html>

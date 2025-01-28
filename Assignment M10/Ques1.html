@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Priority </title>
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS targets the div with the class "box" */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: blue; /* This color will be overridden by inline CSS */
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Priority Demonstration</h1>
+
+    <!-- Div with inline CSS -->
+    <div class="box" style="background-color: red; font-weight: bold;">
+        Inline CSS Takes Priority
+    </div>
+
+    <!-- Div with only internal CSS applied -->
+    <div class="box">
+        Internal CSS Applied
+    </div>
+
+    <!-- Div with external CSS (linked in comments below, simulate if necessary) -->
+    <div class="box external">
+        External CSS Applied
+    </div>
+
+    <!-- External CSS would typically look like this: -->
+    <!-- Save this in a separate file called "styles.css" and link using <link> -->
+    <!-- Example: <link rel="stylesheet" href="styles.css"> -->
+
+    <!-- External CSS File Content Example -->
+    <!--
+    .external {
+        background-color: green; /* Applies to the div with class "external" */
+        font-style: italic;
+    }
+    -->
+
+    <p>
+        Comments:
+        <ul>
+            <li>Inline CSS has the highest priority and overrides both internal and external CSS.</li>
+            <li>Internal CSS applies when inline CSS is not present.</li>
+            <li>External CSS has the lowest priority but is easier to maintain for large projects.</li>
+        </ul>
+    </p>
+</body>
+</html>

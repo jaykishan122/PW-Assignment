@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .book-list {
+            margin-top: 20px;
+        }
+        .book {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .book span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Library System</h1>
+
+    <div>
+        <h2>Add a Book</h2>
+        <input type="text" id="title" placeholder="Book Title">
+        <input type="text" id="author" placeholder="Author">
+        <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <div class="book-list">
+        <h2>Available Books</h2>
+        <div id="availableBooks"></div>
+    </div>
+
+    <div class="book-list">
+        <h2>Checked Out Books</h2>
+        <div id="checkedOutBooks"></div>
+    </div>
+
+    <script>
+        class Book {
+            constructor(title, author) {
+                this.title = title;
+                this.author = author;
+                this.isAvailable = true;
+            }
+        }
+
+        class Library {
+            constructor() {
+                this.books = [];
+            }
+
+            addBook(book) {
+                this.books.push(book);
+                this.renderBooks();
+            }
+
+            checkOutBook(title) {
+                const book = this.books.find(b => b.title === title && b.isAvailable);
+                if (book) {
+                    book.isAvailable = false;
+                    this.renderBooks();
+                    return true;
+                }
+                return false;
+            }
+
+            returnBook(title) {
+                const book = this.books.find(b => b.title === title && !b.isAvailable);
+                if (book) {
+                    book.isAvailable = true;
+                    this.renderBooks();
+                    return true;
+                }
+                return false;
+            }
+
+            renderBooks() {
+                const availableBooksDiv = document.getElementById('availableBooks');
+                const checkedOutBooksDiv = document.getElementById('checkedOutBooks');
+
+                availableBooksDiv.innerHTML = '';
+                checkedOutBooksDiv.innerHTML = '';
+
+                this.books.forEach(book => {
+                    const bookDiv = document.createElement('div');
+                    bookDiv.className = 'book';
+                    bookDiv.innerHTML = `<span>Title:</span> ${book.title} <br> <span>Author:</span> ${book.author}`;
+
+                    if (book.isAvailable) {
+                        const checkOutButton = document.createElement('button');
+                        checkOutButton.textContent = 'Check Out';
+                        checkOutButton.onclick = () => this.checkOutBook(book.title);
+                        bookDiv.appendChild(checkOutButton);
+                        availableBooksDiv.appendChild(bookDiv);
+                    } else {
+                        const returnButton = document.createElement('button');
+                        returnButton.textContent = 'Return';
+                        returnButton.onclick = () => this.returnBook(book.title);
+                        bookDiv.appendChild(returnButton);
+                        checkedOutBooksDiv.appendChild(bookDiv);
+                    }
+                });
+            }
+        }
+        const library = new Library();
+        function addBook() {
+            const title = document.getElementById('title').value;
+            const author = document.getElementById('author').value;
+            if (title && author) {
+                const book = new Book(title, author);
+                library.addBook(book);
+                document.getElementById('title').value = '';
+                document.getElementById('author').value = '';
+            } else {
+                alert('Please enter both title and author.');
+            }
+        }
+    </script>
+</body>
+</html>

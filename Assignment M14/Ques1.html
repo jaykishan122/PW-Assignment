@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <style>/* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        /* Gallery Container */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr); /* 3 columns */
+            grid-gap: 10px; /* Space between images */
+            width: 80%;
+            max-width: 1000px;
+            border: 2px solid black; /* Border for the entire gallery */
+            padding: 10px;
+            background-color: #fff;
+        }
+        
+        /* Gallery Items */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .gallery-container > .gallery-item:nth-child(1) {
+    grid-column: span 2; /* The first image in the first row spans 2 columns */
+}
+.gallery-container > .gallery-item:nth-child(3) {
+    grid-row: span 2; /* The first image in the first row spans 2 columns */
+}
+.gallery-container > .gallery-item:nth-child(5) {
+    grid-row: span 3; /* The first image in the first row spans 2 columns */
+}
+.gallery-item:nth-child(1){
+    height:105px;
+}
+.gallery-item:nth-child(2){
+    height: 105px;
+}
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; /* Ensures images fit neatly in the grid */
+        }
+        </style>
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="1.jpg" alt="Image 1"></div>
+        <div class="gallery-item"><img src="2.jpg" alt="Image 2"></div>
+        <div class="gallery-item"><img src="3.jpg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="4.jpg" alt="Image 4"></div>
+        <div class="gallery-item"><img src="5.jpg" alt="Image 5"></div>
+        <div class="gallery-item"><img src="6.jpg" alt="Image 6"></div>
+    </div>
+</body>
+</html>

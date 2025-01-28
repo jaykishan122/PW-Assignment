@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator with Method Chaining</h1>
+
+    <div>
+        <button onclick="performCalculation()">Perform Calculation</button>
+        <button onclick="resetCalculator()">Reset Calculator</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        // Calculator Object with Method Chaining
+        const Calculator = {
+            result: 0,
+
+            add(value) {
+                this.result += value;
+                return this; // Enables chaining
+            },
+
+            subtract(value) {
+                this.result -= value;
+                return this; // Enables chaining
+            },
+
+            multiply(value) {
+                this.result *= value;
+                return this; // Enables chaining
+            },
+
+            divide(value) {
+                if (value !== 0) {
+                    this.result /= value;
+                } else {
+                    console.error("Division by zero is not allowed.");
+                }
+                return this; // Enables chaining
+            },
+
+            reset() {
+                this.result = 0;
+                return this; // Enables chaining
+            },
+
+            getResult() {
+                return this.result; // Returns the result
+            }
+        };
+
+        function performCalculation() {
+            const result = Calculator.add(10)
+                .subtract(2)
+                .multiply(3)
+                .divide(4)
+                .getResult();
+
+            document.getElementById('output').textContent = `Current Result: ${result}`;
+        }
+
+        function resetCalculator() {
+            Calculator.reset();
+            document.getElementById('output').textContent = 'Calculator reset. Ready for new calculation!';
+        }
+    </script>
+</body>
+</html>

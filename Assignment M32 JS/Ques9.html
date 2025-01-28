@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Question</h1>
+    <script>
+function fibonacci(n) {
+    if (n === 0) {
+        return 0;
+    } else if (n === 1) {
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+function printFibonacciSeries(n) {
+    console.log("Fibonacci Series up to " + n + " terms:");
+    for (let i = 0; i < n; i++) {
+        console.log(fibonacci(i));  
+    }
+}
+printFibonacciSeries(10);
+
+    </script>
+</body>
+</html>
